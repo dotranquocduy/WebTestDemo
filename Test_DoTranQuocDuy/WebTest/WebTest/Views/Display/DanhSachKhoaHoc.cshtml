@@ -1,0 +1,12 @@
+﻿@model IEnumerable<WebTest.Models.KhoaHoc>
+
+@{
+    ViewBag.Title = "DanhSachKhoaHoc";
+}
+
+<h2 style="font-weight:bold;">Khóa học</h2>
+@foreach (var item in Model.ToList())
+{
+
+    <li><a href="@Url.Action("NoiDung","Display",new { @index= item.ID})" >@item.TenKhoaHoc</a></li>
+}

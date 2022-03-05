@@ -1,0 +1,16 @@
+﻿@model IEnumerable<WebTest.Models.MonHoc>
+
+@{
+    ViewBag.Title = "DanhSachMonHoc";
+}
+<div class="grid-container">
+    @foreach (var GroupItem in Model)
+    {
+
+        <div class="grid-item">
+            <p>@GroupItem.TenMonHoc</p>
+        </div>
+
+
+    }
+</div>

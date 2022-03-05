@@ -1,0 +1,37 @@
+﻿@using WebTest.Models
+@model IEnumerable<WebTest.Models.KhoaHoc>
+	@{
+
+        ViewBag.Title = "NoiDung";
+
+}
+	<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="~/Content/layout1.css" />
+	</head>
+
+	<body>  
+
+		<div class="grid-row" style="padding-top:50px;">
+           
+            <div class="grid-column" style="background-color:#F7DC6F;">
+                @foreach (var item in Model)
+                {
+                  <h2 style="font-weight:bold;">Khóa học @item.TenKhoaHoc</h2>
+                }
+
+                    @{Html.RenderAction("DanhSachMonHoc", "Display");}
+                </div>
+
+			<div class="grid-column" style="background-color:#F7DC6F;">
+				@{Html.RenderAction("DanhSachKhoaHoc", "Display");}
+			</div>
+                    
+		</div>
+	</body>
+
+
+</html>
